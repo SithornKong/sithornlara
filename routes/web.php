@@ -28,6 +28,9 @@ Route::get('/patient', 'PatientController@index');
 Route::get('/patient/add/{id?}', 'PatientController@add');
 Route::post('/patient/save', 'PatientController@save');
 Route::get('/patient/delete/{id}', 'PatientController@delete');
+Route::get('/district', 'PatientController@district');
+Route::get('/commune', 'PatientController@commune');
+Route::get('/village', 'PatientController@village');
 
 Route::get('/treatment', 'TreatmentController@index');
 Route::get('/treatment/treat/{id?}', 'TreatmentController@treat');

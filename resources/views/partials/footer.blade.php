@@ -1,3 +1,4 @@
+
 <!-- jQuery 3 -->
 <script src="{{asset('/adminlte/bower_components/jquery/dist/jquery.min.js')}}"></script>
 <!-- Bootstrap 3.3.7 -->
@@ -31,3 +32,9 @@
 <script src="{{asset('/adminlte/bower_components/fullcalendar/dist/fullcalendar.min.js')}}"></script>
 <!--SweetAlert2.js-->
 <script src="{{asset('/sweetalert2/sweetalert2.all.js')}}"></script>
+<!-- bootstrap notify -->
+<script src="{{asset('/js/bootstrap-notify.js')}}"></script>
+<!-- iCheck 1.0.1 -->
+<script src="{{asset('/adminlte/plugins/iCheck/icheck.min.js')}}"></script>
+
+

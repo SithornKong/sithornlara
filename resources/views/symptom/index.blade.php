@@ -31,19 +31,19 @@
                             </tr>
                             </thead>
                             <tbody>
-
+                            @if(isset($symptoms))
+                                @foreach($symptoms as $symptom)
                             <tr>
-                                <td>1</td>
-                                <td>F1</td>
-                                <td>Fever and headache</td>
-
-
+                                <td>{{$symptom->id}}</td>
+                                <td>{{$symptom->name}}</td>
+                                <td>{{$symptom->description}}</td>
                                 <td>
-                                    <a href="{{url('/symptom/form/')}}" class="btn btn-sm btn-info">Edit</a>
+                                    <a href="{{url('/symptom/add/')}}" class="btn btn-sm btn-info">Edit</a>
                                     <a href="{{url('/symptom/delete/')}}" class="btn btn-sm btn-danger">Delete</a>
                                 </td>
                             </tr>
-
+                                @endforeach
+                            @endif
                             </tbody>
                         </table>
                     </div>

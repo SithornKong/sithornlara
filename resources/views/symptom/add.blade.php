@@ -22,15 +22,27 @@
                 </div>
                 <!-- /.box-header -->
                 <!-- form start -->
-                <form role="form">
+                <form role="form" method="post" action="{{url('/symptom/save')}}">
+                    {{csrf_field()}}
+                    @if(isset($symptom))
+                        <input type="hidden" name="id" value="{{$symptom->id}}">
+                    @endif
                     <div class="box-body">
                         <div class="form-group">
                             <label>Symptom</label>
-                            <input type="text" class="form-control" name="input[symptom]" placeholder="Symptom">
+                            <input type="text"
+                                   class="form-control"
+                                   name="input[name]"
+                                   placeholder="Symptom"
+                                   value="{{isset($symptom)?$symptom->name:''}}">
                         </div>
                         <div class="form-group">
                             <label >Description</label>
-                            <input type="text" class="form-control" name="input[description]" placeholder="Description">
+                            <input type="text"
+                                   class="form-control"
+                                   name="input[description]"
+                                   placeholder="Description"
+                                   value="{{isset($symptom)?$symptom->description:''}}">
                         </div>
 
                     </div>

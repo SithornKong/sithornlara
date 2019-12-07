@@ -132,6 +132,15 @@
 
                                 </div>
                                 <div class="col-md-4 form-group">
+                                    <label>Active</label>
+                                    <div>
+                                    <input type="checkbox" class="flat-red" checked>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8 form-group">
 
                                     <label>Comment</label>
                                     <textarea class="form-control" rows="3" placeholder="Enter..."></textarea>
@@ -163,6 +172,11 @@
         });
         $('#dateappo').datepicker({
             format: 'yyyy-mm-dd'
+        });
+        //Flat red color scheme for iCheck
+        $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+            checkboxClass: 'icheckbox_flat-green',
+            radioClass   : 'iradio_flat-green'
         });
     </script>
 @endpush

@@ -1,3 +1,4 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <link rel="stylesheet" href="{{asset('/adminlte/bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
 <!-- Font Awesome -->
@@ -15,6 +16,8 @@
 <link rel="stylesheet" href="{{asset('/adminlte/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css')}}">
 <!-- jvectormap -->
 <link rel="stylesheet" href="{{asset('/adminlte/bower_components/jvectormap/jquery-jvectormap.css')}}">
+<!-- iCheck for checkboxes and radio inputs -->
+<link rel="stylesheet" href="{{asset('/adminlte/plugins/iCheck/all.css')}}">
 <!-- Theme style -->
 <link rel="stylesheet" href="{{asset('/adminlte/dist/css/AdminLTE.min.css')}}">
 <!-- AdminLTE Skins. Choose a skin from the css/skins

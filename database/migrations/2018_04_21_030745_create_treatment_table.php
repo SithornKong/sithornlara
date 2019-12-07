@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePrescriptionTable extends Migration
+class CreateTreatmentTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreatePrescriptionTable extends Migration
      */
     public function up()
     {
-        Schema::create('prescription', function (Blueprint $table) {
+        Schema::create('treatment', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('patient_id');
             $table->integer('doctor_id');
@@ -23,6 +23,7 @@ class CreatePrescriptionTable extends Migration
             $table->date('datevisit');
             $table->integer('drugquentity');
             $table->date('dateappointment');
+            $table->integer('isactive');
             $table->string('transfer');
             $table->string('support');
             $table->string('description');
@@ -38,6 +39,6 @@ class CreatePrescriptionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('prescription');
+        Schema::dropIfExists('treatment');
     }
 }

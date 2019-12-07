@@ -22,15 +22,27 @@
                 </div>
                 <!-- /.box-header -->
                 <!-- form start -->
-                <form role="form">
+                <form role="form" method="post" action="{{url('/regiment/save')}}">
+                    {{csrf_field()}}
+                    @if(isset($regiment))
+                        <input type="hidden" name="id" value="{{$regiment->id}}">
+                    @endif
                     <div class="box-body">
                         <div class="form-group">
                             <label>Regiment</label>
-                            <input type="text" class="form-control" name="input[regiment]" placeholder="Regiment">
+                            <input type="text"
+                                   value="{{isset($regiment)?$regiment->name:''}}"
+                                   class="form-control"
+                                   name="input[name]"
+                                   placeholder="Regiment">
                         </div>
                         <div class="form-group">
                             <label >Description</label>
-                            <input type="text" class="form-control" name="input[description]" placeholder="Description">
+                            <input type="text"
+                                   value="{{isset($regiment)?$regiment->description:''}}"
+                                   class="form-control"
+                                   name="input[description]"
+                                   placeholder="Description">
                         </div>
 
                     </div>
@@ -48,3 +60,31 @@
 
 </section>
 @endsection
+
+@push('scripts')
+    <script>
+                @if(session('errors'))
+
+                @if (count($errors) > 0)
+        var message = '<ul>';
+        @foreach ($errors->all() as $error)
+            message += '<li>{{ $error }}</li>';
+        @endforeach
+            message += '</ul>';
+        @endif
+        $.notify({
+// options
+//            title: 'Fail',
+//            icon: 'glyphicon glyphicon-warning-sign',
+            message: message
+        }, {
+// settings
+            type: 'danger',
+            animate: {
+                enter: 'animated lightSpeedIn',
+                exit: 'animated lightSpeedOut'
+            },
+        });
+        @endif
+    </script>
+@endpush

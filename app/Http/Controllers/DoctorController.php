@@ -9,8 +9,8 @@ class DoctorController extends Controller
 {
     public function index(){
 
-        $doctor = doctor::get();
-        $output['doctors']=$doctor;
+        $doctors = doctor::all();
+        $output['doctors']=$doctors;
         return view('doctor.index')->with($output);
     }
 

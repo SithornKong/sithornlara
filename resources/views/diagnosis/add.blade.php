@@ -23,15 +23,27 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form role="form">
+            <form role="form" action="{{url('/diagnosis/save')}}" method="post">
+                {{csrf_field()}}
+                @if(isset($diagnosis))
+                    <input type="hidden" name="id" value="{{$diagnosis->id}}">
+                @endif
                 <div class="box-body">
                     <div class="form-group">
                         <label>ICD10</label>
-                        <input type="text" class="form-control" name="input[icd]" placeholder="ICD code">
+                        <input type="text"
+                               class="form-control"
+                               name="input[icd]"
+                               placeholder="ICD code"
+                               value="{{isset($diagnosis)?$diagnosis->icd:''}}">
                     </div>
                     <div class="form-group">
                         <label >Description</label>
-                        <input type="text" class="form-control" name="input[description]" placeholder="Description">
+                        <input type="text"
+                               class="form-control"
+                               name="input[description]"
+                               placeholder="Description"
+                               value="{{isset($diagnosis)?$diagnosis->description:''}}">
                     </div>
 
                 </div>

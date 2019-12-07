@@ -31,19 +31,21 @@
                         </tr>
                         </thead>
                         <tbody>
-
+                        @if(isset($diagnoses))
+                            @foreach($diagnoses as $diagnosis )
                                 <tr>
-                                    <td>1</td>
-                                    <td>F10</td>
-                                    <td>Flu</td>
+                                    <td>{{$diagnosis->id}}</td>
+                                    <td>{{$diagnosis->icd}}</td>
+                                    <td>{{$diagnosis->description}}</td>
 
 
                                     <td>
-                                        <a href="{{url('/diagnosis/form/')}}" class="btn btn-sm btn-info">Edit</a>
+                                        <a href="{{url('/diagnosis/add/')}}" class="btn btn-sm btn-info">Edit</a>
                                         <a href="{{url('/diagnosis/delete/')}}" class="btn btn-sm btn-danger">Delete</a>
                                     </td>
                                 </tr>
-
+                            @endforeach
+                        @endif
                         </tbody>
                     </table>
                 </div>

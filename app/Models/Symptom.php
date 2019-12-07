@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Symptom extends Model
 {
@@ -12,8 +13,8 @@ class Symptom extends Model
     protected $dates = ['deleted_at'];
 
     public $fillable = [
-        'symptom',
-        'description',
+        'name',
+        'description'
 
     ];
 
