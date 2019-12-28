@@ -50,7 +50,7 @@
                 <!-- /.box-body -->
 
                 <div class="box-footer">
-                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="submit" class="btn btn-primary pull-right">Save</button>
                 </div>
             </form>
         </div>

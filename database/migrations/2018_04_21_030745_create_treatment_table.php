@@ -21,12 +21,12 @@ class CreateTreatmentTable extends Migration
             $table->integer('symptom_id');
             $table->integer('diagnosis_id');
             $table->date('datevisit');
-            $table->integer('drugquentity');
-            $table->date('dateappointment');
-            $table->integer('isactive');
+            $table->integer('drugquantity');
+            $table->date('appointment');
+            $table->boolean('active');
             $table->string('transfer');
             $table->string('support');
-            $table->string('description');
+            $table->string('comment');
             $table->softDeletes();
             $table->timestamps();
         });

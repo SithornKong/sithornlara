@@ -46,9 +46,20 @@
                                         <option>Male</option>
                                     </select>
                                 </div>
+                                <div class="form-group">
+                                    <label>Marital Status</label>
+                                    <select class="form-control select2" style="width: 100%;">
+                                        <option selected="selected">Single</option>
+                                        <option>Married</option>
+                                    </select>
+                                </div>
                                 <div class=" form-group">
                                     <label>Age</label>
                                     <input type="text" class="form-control" placeholder="Age">
+                                </div>
+                                <div class=" form-group">
+                                    <label>Occupation</label>
+                                    <input type="text" class="form-control">
                                 </div>
                                 <div class=" form-group">
                                     <label>Birth Date</label>
@@ -59,6 +70,7 @@
                                         <input type="text" class="form-control pull-right" id="birthdate"
                                                placeholder="Date">
                                     </div>
+
 
                                 </div>
                             </div>
@@ -71,9 +83,7 @@
                                     <label>Province</label>
                                     <select class="province form-group select2" style="width: 100%;">
                                         <option value="0" disabled="true" selected="true">Select province</option>
-                                        @foreach($provinces as $province)
-                                            <option value="{{$province->id}}">{{$province->name}}</option>
-                                        @endforeach
+
                                     </select>
 
                                     <label>District</label>
@@ -92,12 +102,16 @@
                                     </select>
                                 </div>
                                 <div class=" form-group">
-                                    <label>Sick Time</label>
+                                    <label>Sick Period</label>
                                     <input type="text" class="form-control" placeholder="Months">
                                 </div>
                                 <div class=" form-group">
+                                    <label>Phone Number</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class=" form-group">
                                     <label>Comment</label>
-                                    <textarea class="form-control" rows="3" placeholder="Enter..."></textarea>
+                                    <textarea class="form-control" rows="7" placeholder="Enter..."></textarea>
                                 </div>
                             </div>
                         </div>

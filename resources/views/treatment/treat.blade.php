@@ -8,7 +8,7 @@
 
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Patient</a></li>
+            <li><a href="#"><i class="fa fa-dashboard"></i>Patient</a></li>
             <li class="active">treat</li>
         </ol>
     </section>
@@ -55,7 +55,7 @@
                                 <div class="col-md-4 form-group">
 
                                     <label>Symptom</label>
-                                    <select class="form-control select2" multiple="multiple"
+                                    <select class="form-control select2"
                                             data-placeholder="Select a symptom"
                                             style="width: 100%;">
                                         <option>Fever</option>
@@ -73,8 +73,6 @@
                                     <label>Diagnosis</label>
                                     <select class="form-control select2" style="width: 100%;">
                                         <option selected="selected">Flu</option>
-
-
                                     </select>
 
                                 </div>
@@ -114,7 +112,9 @@
                                 <div class="col-md-4 form-group">
 
                                     <label>Doctor</label>
-                                    <input type="text" class="form-control" placeholder="Dr.">
+                                    <select class="form-control select2" style="width: 100%;">
+                                        <option selected="selected">Dr.</option>
+                                    </select>
 
                                 </div>
                                 <div class="col-md-4 form-group">
